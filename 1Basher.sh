@@ -1,6 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>c25-1basher</title>
-<style>body{background:#0a0a1a;color:#e0e0ff;font-family:monospace;padding:20px;max-width:900px;margin:0 auto}h1{color:#7af}.badge{background:#1a3a1a;border:1px solid #4f4;padding:3px 10px;border-radius:20px;font-size:.8em;color:#4f4}pre{background:#111128;border:1px solid #333;border-radius:8px;padding:20px;overflow-x:auto;margin-top:20px}</style>
-</head><body><span class="badge">✅ CONFIRMED RAN</span><h1>c25-1basher</h1><p style="color:#888">Lines: 36 | Deps: none | C25 FacePrintPay</p><pre>#!/data/data/com.termux/files/usr/bin/bash
+#!/data/data/com.termux/files/usr/bin/bash
 # 🧠 Sovereign Commander 1Basher Protocol
 logdir=~/aikre8tive/logs
 inboxdir=~/aikre8tive/whispersync/inbox
@@ -11,12 +9,13 @@ mkdir -p "$logdir" "$inboxdir" "$payloadsdir"
 PAYLOAD="$1"
 [ -z "$PAYLOAD" ] && PAYLOAD="🧠 Default scaff2agents directive at $timestamp"
 payload_file="$payloadsdir/payload_${timestamp}.txt"
-echo "$PAYLOAD" &gt; "$payload_file"
+echo "$PAYLOAD" > "$payload_file"
 echo "[📦] Payload recorded: $payload_file" | tee -a "$logfile"
 AGENTS=(Chronos Echo Zion Recon Mars Pluto Neptune Venus Titan Luna)
 echo "🔁 Dispatching to Agents..." | tee -a "$logfile"
 for agent in "${AGENTS[@]}"; do
   agent_file="$inboxdir/${agent}_inbox_$timestamp.txt"
-  echo "[$(date)] $PAYLOAD" &gt; "$agent_file"
+  echo "[$(date)] $PAYLOAD" > "$agent_file"
   echo "✅ $agent received payload at $agent_file" | tee -a "$logfile"
-done</pre></body></html>
+done
+echo "🌠 Mission Complete. Total agents indexed: ${#AGENTS[@]}" | tee -a "$logfile"
