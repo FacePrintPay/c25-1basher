@@ -50,7 +50,7 @@ git add .
 git commit -m "🌌 Sovereign Launch: All Agents Live"
 git push -u origin master
 # Set GitHub Token
-export GITHUB_TOKEN="${GITHUB_TOKEN:-REPLACE_WITH_REAL_TOKEN}"
+export GITHUB_TOKEN="${GITHUB_TOKEN}"
 echo "✅ All Planetary Agents Launched"
 echo "📜 Git Pushed to https://github.com/FacePrintPay/ai-metaverse-platform!"
 echo "🧠 Ai Systems Nominal"
